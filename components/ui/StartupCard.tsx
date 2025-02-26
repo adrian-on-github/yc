@@ -5,8 +5,6 @@ import { EyeIcon } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./button";
 
-export type StartupTypeCard = Omit<Startup, "author"> & { author?: Author };
-
 const StartupCard = ({ post }: { post: StartupTypeCard }) => {
   const {
     _createdAt,
