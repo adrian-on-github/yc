@@ -1,5 +1,6 @@
 import SearchForm from "@/components/ui/SearchForm";
 import StartupCard from "@/components/ui/StartupCard";
+import { StartupTypeCard } from "@/components/ui/StartupCard";
 
 export default async function Home({
   searchParams,
@@ -10,9 +11,9 @@ export default async function Home({
 
   const posts = [
     {
-      _createdAt: "Yesterday",
+      _createdAt: new Date(),
       views: 55,
-      author: { _id: 1 },
+      author: { _id: 1, name: "Adrian" },
       _id: 1,
       description: "This is a description",
       image: "...",
@@ -39,7 +40,7 @@ export default async function Home({
         <ul className="mt-7 card_grid">
           {posts?.length > 0 ? (
             posts.map((post: StartupCardType, index: number) => (
-              <StartupCard key={post?.id} post={posts} />
+              <StartupCard key={post?._id} post={posts} />
             ))
           ) : (
             <p className="no-results">No Startups found</p>
