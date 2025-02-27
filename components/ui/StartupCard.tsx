@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/utils";
 import { EyeIcon } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./button";
-import { Author, Startup } from "@/santiy/types";
+import { Author, Startup } from "@/sanity/types";
 
 export type StartupTypeCard = Omit<Startup, "author"> & { author?: Author };
 
