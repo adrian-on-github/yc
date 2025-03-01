@@ -9,8 +9,6 @@ import markdownit from "markdown-it";
 import { Skeleton } from "@/components/ui/skeleton";
 import View from "@/components/ui/View";
 
-export const experimental_prr = true;
-
 const md = markdownit();
 
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
